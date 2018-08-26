@@ -80,7 +80,7 @@ func createImage(w http.ResponseWriter, r *http.Request) {
 	}
 	fmt.Println(fileExtensions)
 
-	path := filepath.Join("./images", fileName+fileExtensions[0])
+	path := filepath.Join(IMAGE_DIR, fileName+fileExtensions[0])
 	log.Printf("Saving %s", path)
 
 	createdFile, err := os.Create(path)
